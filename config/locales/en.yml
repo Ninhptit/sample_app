@@ -30,4 +30,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  static_pages:
+    home:
+      welcome: "Welcome to the Sample App"
+      introduce: "This is the home page for the"
+      ror: "Ruby on Rails Tutorial" 
+    contact:
+      contact: "Contact the Ruby on Rails Tutorial about the sample app at the"
+    help:
+      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      rails_help: "Rails Tutorial help section"
+      get_help: "To get help on this sample app, see the"
+      rails_tutorial: "Ruby on Rails Tutorial"
+    about:
+      to_teach: "to teach web development with"
+      this_sample: "This is the sample application for the tutorial."      
+
+  users:
+    new:
+      signup_page: "This will be a signup page for new users."
+
+  layouts:
+    footer:
+      ror: "Ruby on Rails Tutorial"  
+ 
