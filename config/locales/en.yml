@@ -53,10 +53,28 @@ en:
       create_account: "Create my account"
   layouts:
     footer:
-      ror: "Ruby on Rails Tutorial"      
+      ror: "Ruby on Rails Tutorial"
+    header:
+      sample_app: "sample app"
+      home: "Home"
+      help: "Help"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+      users: "Users" 
   shared:
     error_messages:
       contains: "The form contains"
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
+      new_user: "New user?"  
   controllers:
     user:
       welcome: "Welcome to the Sample App!"
+    session:
+      create:
+        invalid_password: "Invalid email/password combination"  
