@@ -44,13 +44,19 @@ en:
       rails_tutorial: "Ruby on Rails Tutorial"
     about:
       to_teach: "to teach web development with"
-      this_sample: "This is the sample application for the tutorial."      
-
+      this_sample: "This is the sample application for the tutorial."    
   users:
     new:
       signup_page: "This will be a signup page for new users."
-
+      sign_up: "Sign up"
+      confirmation: "Confirmation"
+      create_account: "Create my account"
   layouts:
     footer:
-      ror: "Ruby on Rails Tutorial"  
- 
+      ror: "Ruby on Rails Tutorial"      
+  shared:
+    error_messages:
+      contains: "The form contains"
+  controllers:
+    user:
+      welcome: "Welcome to the Sample App!"

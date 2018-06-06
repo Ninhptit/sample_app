@@ -1,3 +1,4 @@
 maximum_name: 50
 maximum_email: 255
 minimum_password: 8
+gravatar_size: 80
