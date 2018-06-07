@@ -63,7 +63,7 @@ en:
       settings: "Settings"
       logout: "Log out"
       login: "Log in"
-      users: "Users" 
+      user: "Users" 
   shared:
     error_messages:
       contains: "The form contains"
@@ -71,10 +71,10 @@ en:
     new:
       login: "Log in"
       signup: "Sign up now!"
-      new_user: "New user?"  
+      new_user: "New user?"
+      remember: "Remember me on this computer"
   controllers:
     user:
       welcome: "Welcome to the Sample App!"
     session:
-      create:
-        invalid_password: "Invalid email/password combination"  
+      invalid_password: "Invalid email/password combination"  
