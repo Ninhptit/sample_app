@@ -51,6 +51,16 @@ en:
       sign_up: "Sign up"
       confirmation: "Confirmation"
       create_account: "Create my account"
+    user:
+      delete: "delete"
+      you_sure: "You sure?"
+    edit:
+      edit_user: "Edit user"
+      save_change: "Save changes"
+      update_profile: "Update your profile"
+      change: "Change"
+    index:
+      all_user: "All users"
   layouts:
     footer:
       ror: "Ruby on Rails Tutorial"
@@ -76,5 +86,10 @@ en:
   controllers:
     user:
       welcome: "Welcome to the Sample App!"
+      profile_update: "Profile updated"
+      user_destroyed: "User destroyed"
+      please_login: "Please log in."
+      not_found: "User not found"
+      not_destroyed: "User could not be destroyed"
     session:
       invalid_password: "Invalid email/password combination"  
