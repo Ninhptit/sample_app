@@ -17,9 +17,9 @@ class SessionsController < ApplicationController
   end
 
   private
-    def login user
-      log_in user
-      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_to user
-    end
+  def login user
+    log_in user
+    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+    redirect_to user
+  end
 end
