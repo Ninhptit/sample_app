@@ -7,6 +7,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "bcrypt", "3.1.12"
+gem "figaro"
 gem "bootstrap-will_paginate", "1.0.0"
 gem "config"
 gem "faker", "1.7.3"
