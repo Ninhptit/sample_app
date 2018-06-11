@@ -91,5 +91,16 @@ en:
       please_login: "Please log in."
       not_found: "User not found"
       not_destroyed: "User could not be destroyed"
+      please_check_mail: "Please check your email to activate your account."
     session:
-      invalid_password: "Invalid email/password combination"  
+      invalid_password: "Invalid email/password combination"
+      not_actived: "Account not activated. Check your email for the activation link."
+    account_activation:
+      account_activated: "Account activated!"
+      invalid_link: "Invalid activation link"
+  mailers:
+    user_mailer:
+      account_activation: "Account activation"
+  user_mailer:
+    account_activation:
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"  

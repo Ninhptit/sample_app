@@ -19,15 +19,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = I18n.t "controllers.user.welcome"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = I18n.t "controllers.user.please_check_mail"
+      redirect_to root_url
     else
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @user.update_attributes user_params
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = I18n.t "controllers.user.not_found"
-    redirect_to root_path 
+    redirect_to root_path
   end
 
   def user_params
@@ -62,10 +62,9 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      flash[:danger] = I18n.t "controllers.user.please_login"
-      redirect_to login_url
-    end
+    return if logged_in?
+    flash[:danger] = I18n.t "controllers.user.please_login"
+    redirect_to login_url
   end
 
   def verify_admin!
