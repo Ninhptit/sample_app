@@ -3,3 +3,4 @@ maximum_email: 255
 minimum_password: 6
 gravatar_size: 80
 gravatar_user_size: 50
+password_expired: 2
