@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def show
     redirect_to signup_path if @user.nil?
+    @microposts = @user.microposts.paginate page: params[:page]
   end
 
   def create
