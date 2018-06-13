@@ -34,7 +34,9 @@ en:
     home:
       welcome: "Welcome to the Sample App"
       introduce: "This is the home page for the"
-      ror: "Ruby on Rails Tutorial" 
+      ror: "Ruby on Rails Tutorial"
+      sample_app: "sample application."
+      sign_up: "Sign up now!"
     contact:
       contact: "Contact the Ruby on Rails Tutorial about the sample app at the"
     help:
@@ -59,8 +61,11 @@ en:
       save_change: "Save changes"
       update_profile: "Update your profile"
       change: "Change"
+      confirmation: "Confirmation"
     index:
       all_user: "All users"
+    show:
+      micropost: "Microposts"  
   layouts:
     footer:
       ror: "Ruby on Rails Tutorial"
@@ -77,6 +82,13 @@ en:
   shared:
     error_messages:
       contains: "The form contains"
+    micropost_form:
+      compose: "Compose new micropost..."
+      maximum_file: "Maximum file size is 5MB. Please choose a smaller file."
+      post: "Post"
+    user_info:
+      view_profile: "view my profile"
+      micropost: "micropost"
   sessions:
     new:
       login: "Log in"
@@ -91,7 +103,19 @@ en:
     edit:
       reset_password: "Reset password"
       update_password: "Update password"
+      confirmation: "Confirmation"
+  microposts:
+    micropost:
+      delete: "Delete"
+      you_sure: "You sure?" 
+      post: "Posted"
   controllers:
+    application:
+      please_login: "Please log in."
+    micropost:
+      micropost_created: "Micropost created!"
+      micropost_deleted: "Micropost deleted"
+      micropost_not_deleted: "Micropost not deleted"
     user:
       welcome: "Welcome to the Sample App!"
       profile_update: "Profile updated"
@@ -112,6 +136,9 @@ en:
       password_expired: "Password reset has expired."
       pass_has_reset: "Password has been reset."
       not_empty: "can't be empty"
+  models:
+    micropost:
+      valid_image_size: "should be less than 5MB"    
   mailers:
     user_mailer:
       account_activation: "Account activation"

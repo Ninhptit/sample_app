@@ -1,7 +1,7 @@
 <% provide :title, t("users.index.all_user") %>
 <h1><%= t ".all_user" %></h1>
 
-<%= will_paginate %>
+<%= paginate @users, theme: "twitter-bootstrap-3" %>
 
 <ul class="users">
   <% @users.each do |user| %>
@@ -9,4 +9,4 @@
   <% end %>
 </ul>
 
-<%= will_paginate %>
+<%= paginate @users, theme: "twitter-bootstrap-3" %>

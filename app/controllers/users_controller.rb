@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create, :show]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :verify_user, only: [:edit, :update]
   before_action :verify_admin!, only: :destroy
   before_action :find_user, only: %i(show edit update destroy)
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.all.page(params[:page]).per 5
   end
 
   def new
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def show
     redirect_to signup_path if @user.nil?
+    @microposts = @user.microposts.all.page(params[:page]).per 5
   end
 
   def create
@@ -71,7 +72,7 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user.admin?
   end
 
-  def correct_user
+  def verify_user
     @user = User.find_by id: params[:id]
     redirect_to root_url unless @user.current_user? current_user
   end
