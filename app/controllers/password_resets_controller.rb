@@ -39,6 +39,9 @@ class PasswordResetsController < ApplicationController
 
   def get_user
     @user = User.find_by email: params[:email]
+    return if @user
+    flash[:danger] = I18n.t "controllers.user.not_found"
+    redirect_to root_path
   end
 
   def valid_user
