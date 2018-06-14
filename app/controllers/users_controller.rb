@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :find_user, only: %i(show edit update destroy)
 
   def index
-    @users = User.all.page(params[:page]).per 5
+    @users = User.all.page(params[:page]).per Settings.per_page
   end
 
   def new
@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to signup_path if @user.nil?
-    @microposts = @user.microposts.all.page(params[:page]).per 5
+    @microposts = @user.microposts.all.page(params[:page]).per Settings.per_page
+    @active_relationship = current_user.active_relationships.build
   end
 
   def create
@@ -47,6 +48,20 @@ class UsersController < ApplicationController
       flash[:danger] = I18n.t "controllers.user.not_destroyed"
       redirect_to root_url
     end
+  end
+
+  def following
+    @title = I18n.t "controllers.user.following"
+    @user  = User.find_by id: params[:id]
+    @users = @user.following.page(params[:page]).per Settings.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = I18n.t "controllers.user.followers"
+    @user  = User.find_by id: params[:id]
+    @users = @user.followers.page(params[:page]).per Settings.per_page
+    render :show_follow
   end
 
   private
