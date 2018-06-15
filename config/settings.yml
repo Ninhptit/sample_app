@@ -8,3 +8,4 @@ content_maximum: 140
 size_image: 5
 resize_image: 400
 type_image: "image/jpeg,image/gif,image/png"
+per_page: 5

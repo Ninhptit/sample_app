@@ -37,6 +37,7 @@ en:
       ror: "Ruby on Rails Tutorial"
       sample_app: "sample application."
       sign_up: "Sign up now!"
+      micropost_feed: "Micropost Feed"
     contact:
       contact: "Contact the Ruby on Rails Tutorial about the sample app at the"
     help:
@@ -65,7 +66,14 @@ en:
     index:
       all_user: "All users"
     show:
-      micropost: "Microposts"  
+      micropost: "Microposts"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    show_follow:
+      view profile: "View my profile"
+      microposts: "Microposts:"
   layouts:
     footer:
       ror: "Ruby on Rails Tutorial"
@@ -89,6 +97,9 @@ en:
     user_info:
       view_profile: "view my profile"
       micropost: "micropost"
+    stats:
+      following: "following"
+      followers: "followers"
   sessions:
     new:
       login: "Log in"
@@ -124,6 +135,8 @@ en:
       not_found: "User not found"
       not_destroyed: "User could not be destroyed"
       please_check_mail: "Please check your email to activate your account."
+      following: "Following"
+      followers: "Followers"
     session:
       invalid_password: "Invalid email/password combination"
       not_actived: "Account not activated. Check your email for the activation link."
